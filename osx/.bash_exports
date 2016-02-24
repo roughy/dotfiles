@@ -1,0 +1,35 @@
+MAGENTA="\[\033[0;35m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[0;32m\]"
+DEFAULT=$LIGHT_GRAY
+
+# Default editor
+export EDITOR=/usr/bin/vim
+
+# Set default blocksize for ls, df, du
+export BLOCKSIZE=1k
+
+# enable and set colors
+export LS_OPTIONS='--color=auto'
+export CLICOLOR='Yes'
+export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
+
+# Set git completion, must be set before export PS1
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+
+# export bash prompt
+export PS1=$GREEN"\w"'$(
+    if [[ $(__git_ps1) =~ \*\)$ ]]
+    # a file has been modified but not added
+    then echo "'$YELLOW'"$(__git_ps1 " (%s)")
+    elif [[ $(__git_ps1) =~ \+\)$ ]]
+    # a file has been added, but not commited
+    then echo "'$YELLOW'"$(__git_ps1 " (%s)")
+    # the state is clean, changes are commited
+    else echo "'$CYAN'"$(__git_ps1 " (%s)")
+    fi)'$GREEN"$ "$DEFAULT
