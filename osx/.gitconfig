@@ -24,3 +24,5 @@
 	untracked = cyan
 [core]
 	excludesfile = /Users/marco/.gitignore
+[push]
+	default = simple
