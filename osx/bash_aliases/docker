@@ -1,7 +1,8 @@
 
-  *********************************************************************************************
-  * docker build -t $IMAGE_NAME .                                 * Build image               *
-  * docker inspect -f '{{ json .NetworkSettings }}' $CONTAINER-ID * Container Network setting *
-  * docker rm $(docker ps -a -q)                                  * Delete exited containers  *
-  *********************************************************************************************
+  ***********************************************************************************************
+  * docker build -t $IMAGE_NAME .                                   * Build image               *
+  * docker inspect -f '{{ json .NetworkSettings }}' $CONTAINER-ID   * Container Network setting *
+  * docker rm $(docker ps -a -q)                                    * Delete exited containers  *
+  * docker rmi $(docker images | grep "^<none>" | awk '{print $3}') * Delete untagged images    *
+  ***********************************************************************************************
 
