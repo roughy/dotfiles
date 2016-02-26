@@ -1,0 +1,7 @@
+
+  *********************************************************************************************
+  * docker build -t $IMAGE_NAME .                                 * Build image               *
+  * docker inspect -f '{{ json .NetworkSettings }}' $CONTAINER-ID * Container Network setting *
+  * docker rm $(docker ps -a -q)                                  * Delete exited containers  *
+  *********************************************************************************************
+

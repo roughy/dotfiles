@@ -1,3 +1,7 @@
+if [ -f ~/bash_aliases/.dockerhelp ]; then
+  source ~/bash_aliases/.dockerhelp
+fi
+
 # profile
 alias profile='source ~/.bash_profile'
 
