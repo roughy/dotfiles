@@ -1,12 +1,15 @@
 
   ***********************************************************************************************
   * docker build -t $D_IMAGE_NAME .                                 * Build image               *
-  * docker inspect -f '{{ json .NetworkSettings }}' $D_CONTAINER_ID * Container Network setting *
-  * docker rm $(docker ps -a -q)                                    * Delete exited containers  *
   * docker rmi $(docker images | grep "^<none>" | awk '{print $3}') * Delete untagged images    *
   * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+  * docker inspect -f '{{ json .NetworkSettings }}' $D_CONTAINER_ID * Container Network setting *
+  * docker exec -it $D_CONTAINER_ID /bin/bash                       * Start Shell of container  *
+  * docker kill $D_CONTAINER_ID                                     * Kills running container   *
+  * docker rm $(docker ps -a -q)                                    * Delete exited containers  *
+  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+  * cheatsheet-docker                                               * Display this help text    *
   * set-docker-image-name {image-name}                              * $D_IMAGE_NAME             *
   * set-docker-container-id {container-id}                          * $D_CONTAINER_ID           *
   ***********************************************************************************************
   
-
