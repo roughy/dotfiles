@@ -27,3 +27,14 @@ alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias ~="cd ~"                              # Go Home
+
+# docker 
+set-docker-image-name() {
+  export D_IMAGE_NAME="$1";
+  echo "D_IMAGE_NAME=${D_IMAGE_NAME}";
+}
+set-docker-container-id() {
+  export D_CONTAINER_ID="$1";
+  echo "D_CONTAINER_ID=${D_CONTAINER_ID}";
+}
+
