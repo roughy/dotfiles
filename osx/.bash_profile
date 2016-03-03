@@ -4,6 +4,10 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
+if [ -d ~/bin ]; then
+  export PATH="~/bin:$PATH"
+fi
+
 # MacPorts Installer addition on 2016-02-22_at_12:05:59: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.

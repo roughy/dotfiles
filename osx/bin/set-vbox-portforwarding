@@ -1,0 +1,20 @@
+#!/bin/bash
+
+declare portHost=( 3306    15671        15672        1883         5672         61613        8111)
+declare   portVM=( 3306    15671        15672        1883         5672         61613        8111)
+declare     name=("MySQL" "RabbitMQ-1" "RabbitMQ-2" "RabbitMQ-3" "RabbitMQ-4" "RabbitMQ-5" "TeamCity")
+
+echo
+for ((i=0; i < ${#name[@]}; i++))
+do
+  echo "Remove port forwarding '${name[$i]}' from vm 'default'"
+  VBoxManage controlvm "default" natpf1 delete "${name[$i]}";
+done
+
+echo
+for ((i=0; i < ${#name[@]}; i++))
+do
+  echo "Add port forwarding '${name[$i]},tcp,127.0.0.1,${portHost[$i]},,${portVM[$i]}' to vm 'default'"
+	VBoxManage controlvm "default" natpf1 "${name[$i]},tcp,127.0.0.1,${portHost[$i]},,${portVM[$i]}";
+done
+
