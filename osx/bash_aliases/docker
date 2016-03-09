@@ -10,7 +10,7 @@
 
   ***********************************************************************************************
   * docker build -t $D_IMAGE_NAME .                                 * Build image               *
-  * docker rmi $(docker images --filter dangling=true)              * Delete untagged images    *
+  * docker rmi $(docker images --filter dangling=true -q)           * Delete untagged images    *
   * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
   * docker inspect -f '{{ json .NetworkSettings }}' $D_CONTAINER_ID * Container Network setting *
   * docker exec -it $D_CONTAINER_ID /bin/bash                       * Start Shell of container  *
