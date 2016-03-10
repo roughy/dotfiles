@@ -1,5 +1,5 @@
-if [ -f ~/bash_aliases/.dockerhelp ]; then
-  source ~/bash_aliases/.dockerhelp
+if [ -f ~/bash_aliases/.cheatsheet ]; then
+  source ~/bash_aliases/.cheatsheet
 fi
 
 # profile

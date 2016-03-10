@@ -1,0 +1,8 @@
+
+  ***********************************************************************************************
+  * ngrep -Wbyline port $PORT                 * Analyze traffic at eth0 interface at port $PORT *
+  * ngrep -Wbyline -d any                     * Analyze traffic at any interface any port       *
+  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
+  * cheatsheet-ngrep                          * Display this help text                          *
+  ***********************************************************************************************
+  
