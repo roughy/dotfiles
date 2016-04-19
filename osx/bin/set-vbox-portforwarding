@@ -1,8 +1,8 @@
 #!/bin/bash
 
-declare portHost=( 3306      3307      27017     15671        15672        1883         5672         61613        8111)
-declare   portVM=( 3306      3307      27017     15671        15672        1883         5672         61613        8111)
-declare     name=("MySQL-1" "MySQL-2" "MongoDB" "RabbitMQ-1" "RabbitMQ-2" "RabbitMQ-3" "RabbitMQ-4" "RabbitMQ-5" "TeamCity")
+declare portHost=( 3306    27017     15671        15672        1883         5672         61613        8111)
+declare   portVM=( 3306    27017     15671        15672        1883         5672         61613        8111)
+declare     name=("MySQL" "MongoDB" "RabbitMQ-1" "RabbitMQ-2" "RabbitMQ-3" "RabbitMQ-4" "RabbitMQ-5" "TeamCity")
 
 
 echo
