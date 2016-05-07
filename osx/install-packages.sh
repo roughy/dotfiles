@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PORT_PACKAGES="htop watch wget"
-BREW_PACKAGES="git bash-completion"
+BREW_PACKAGES="git bash-completion node"
 
 EXIT_CODE=0
 NAME_SCRIPT=`basename "$0"`
