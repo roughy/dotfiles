@@ -1,3 +1,7 @@
+# Custom settings
+
+.lck
+
 # Created by https://www.gitignore.io/api/java,scala,intellij,eclipse,bower,grunt,node,puppet-librarian,osx,windows
 
 ### Java ###
