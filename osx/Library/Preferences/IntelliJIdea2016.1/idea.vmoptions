@@ -1,0 +1,7 @@
+# custom IntelliJ IDEA VM options
+
+-Xms128m
+-Xmx1024m
+-XX:MaxPermSize=350m
+-XX:ReservedCodeCacheSize=240m
+-XX:+UseCompressedOops
