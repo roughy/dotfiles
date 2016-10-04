@@ -16,6 +16,7 @@
   * docker exec -it $D_CONTAINER_ID /bin/bash                       * Start Shell of container  *
   * docker kill $D_CONTAINER_ID                                     * Kills running container   *
   * docker rm $(docker ps -a -q)                                    * Delete exited containers  *
+  * docker stats $(docker ps --format={{.Names}})                   * Show container statistics *
   * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ *
   * cheatsheet-docker                                               * Display this help text    *
   * set-docker-image-name {image-name}                              * $D_IMAGE_NAME             *
